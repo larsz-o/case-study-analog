@@ -58,7 +58,7 @@ const lessonData = {
     ],
     layoutNumber: 1,
     navigation: [
-      { available_scene: "5", current_scene: "4", previous_scene: "2",text: "Continue" },
+      { available_scene: "8", current_scene: "4", previous_scene: "2",text: "Continue" },
     ],
     scene_number: "4",
     sidebar: false,

@@ -34,7 +34,7 @@ const partA = (
       options: [
         { text: `Offer to stay to help make phone calls to family and others who can help.`, conditions: {type: null, command: "NEXT", index: null}, feedback: `This is the best choice. Camille could use support at this time. You can offer your presence to her by helping her with these difficult tasks during her time of need. ` },
         { text: `Give Camille space and leave the home.`, conditions: {type: null, command: "NEXT", index: null}, feedback: `This isn’t the best choice. Camille is in a state of shock and could use your support. ` },
-        { text: `Ask Camille to share stories about Phillip.`, conditions: {type: null, command: "NEXT", index: null}, feedback: `his is a bad choice. Camille is in a state of shock and is not ready to share stories about Phillip. ` },
+        { text: `Ask Camille to share stories about Phillip.`, conditions: {type: null, command: "NEXT", index: null}, feedback: `This is a bad choice. Camille is in a state of shock and is not ready to share stories about Phillip. ` },
       ],
       multipleSelect: false, 
       type: "choice", 

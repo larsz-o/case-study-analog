@@ -52,8 +52,11 @@ const partA = (
   question: `<p><strong>You ask Camille if you can do anything else to help before you leave for the night. </strong></p><p>She asks if you could inform Phillip’s coworkers. You return to the police department to be with officers and the non-sworn staff in shock and grief. You meet up with fellow chaplains to plan for how they would be present and provide care that night and in the days ahead. This includes dividing up responsibilities between chaplains, including who would follow up with command staff, officers/staff who were particularly close with this officer, the family, and work with the FLO. </p> 
 
 `,
+options: [
+  {text: `What are you feeling right now? How are your feelings impacting your work?`, conditions: {type: null, command: '', index: null}, feedback: ``}
+],
   multipleSelect: false, 
-  type: "none",
+  type: "open",
 
   },
  

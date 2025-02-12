@@ -26,7 +26,7 @@ const Navigation = (props) => {
       setQuestions(question[0].data);
     }
     setQuestions(question_text);
-  });
+  },[props.activeScene.checkpoints, question_text]);
   //to-do: check if data is already saved for this question in user answers redux and if so, store its value to short answer/selected
 
   function checkAnswer() {

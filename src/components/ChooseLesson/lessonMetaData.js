@@ -1,17 +1,16 @@
 const metadata = {
   id: 5,
-  name: `Accompanying and Making Death Notifications`,
+  name: `Honoring Medical Donors and Future Healers: University of Arizona College of Medicine`,
   metadata: {
-    description: `This case shows how chaplains accompany colleagues in law enforcement (as well as the military) in making death notifications. It models how death notifications are made and what about the protocol changes if the death was caused by suicide. The case also demonstrates how chaplains support family members and colleagues from the death notification through the funeral or memorial service and beyond, including offering training in suicide prevention. The case encourages all involved in such difficult situations to care for themselves. 
-`,
-    objectives: [`Identify the role of a chaplain or spiritual care provider in making a death notification.`, `Describe how a chaplain engages in a death notification in relations to others present.`,`Identify how death notifications and the events to follow vary based on the cause of death, specifically if the death is a suicide.`, `Explain how chaplains can work collaboratively with local religious leaders when they are present.`, `Describe how chaplains and spiritual care providers can be important partners in suicide prevention.` ],
-    themes: [`Criminal justice and police academy students as well as chaplains working in this context; also maybe command staff.`],
+    description: `This case describes the spiritual care provided by a medical school faculty member and the  creation of a ceremony to provide spiritual guidance to future doctors who may otherwise struggle in gross anatomy with exposure to a dead body. `,
+    objectives: [`understand the significance of diverse spiritualities and cultural beliefs in a medical education/professional setting.`, `consider academic curricula as culturally significant objects.`,`gain a new perspective on the provision of spiritual care to STEM students`, ],
+    themes: [`Students and practitioners who are working with the topic of religious diversity`, `Anatomy students or students whose work has an anatomical component`, `Healthcare professionals who might be called upon to work with anatomy students`, `Educators, chaplains, and administrators who might be called upon to provide spiritual care to a diverse student population`],
 
   },
   image:
-    "https://chaplaincy-innovation-lab-lessons.s3.us-east-1.amazonaws.com/2025-01/how-to-make-a-death-notification.webp",
-  slug: "accompanying-and-making-death-notifications",
-  title: `Accompanying and Making Death Notifications`,
+    "https://chaplaincy-innovation-lab-lessons.s3.us-east-1.amazonaws.com/2025-01/download.webp",
+  slug: "honoring-medical-donors-and-future-healers",
+  title: `Honoring Medical Donors and Future Healers: University of Arizona College of Medicine`,
 }
 
 export default metadata;

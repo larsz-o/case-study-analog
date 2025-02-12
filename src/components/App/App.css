@@ -1,3 +1,7 @@
+aside {
+  margin-left: 5ch;
+  padding-left: 1ch;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -90,9 +94,8 @@ audio {
 
 aside {
   text-align: left;
-  background-color: #282c34;
+  background-color: #e6e6e6;
   padding: 4vh;
-  color: white;
   margin: 10px;
 }
 .true {
@@ -169,7 +172,9 @@ button {
 .buttons-container {
   margin-right: 8vw;
 }
-
+b {
+  font-weight: 800;
+}
 .caption {
   font-size: 1rem;
   color: #282c34;
@@ -725,10 +730,10 @@ ul {
   }
   aside {
     text-align: left;
-    background-color: #282c34;
+    background-color: #e6e6e6;
     padding: 5px;
-    color: white;
     margin: 10px;
+    margin-bottom: 4ch
   }
   article {
     padding: 5px;
@@ -869,6 +874,7 @@ ul {
     padding: 5px;
     color: white;
     margin: 10px;
+    margin-bottom: 4ch
   }
   article {
     padding: 5px;

@@ -24,8 +24,8 @@ const DecisionLayout = (props) => {
      let data = input;
      localStorage.setItem(text, data);
      swal({
-      title: `Keep these feelings in mind as you progress through the scenario.`,
-      text: `Your response: ${data}`,
+      title: `Your responses`,
+      text: `${data}`,
     }).then(() => {
       advance();
     });
@@ -108,8 +108,8 @@ const DecisionLayout = (props) => {
   return (
     <div className="layout-page">
       <div className="flex-box flex-end">
-     <audio controls autoPlay src="https://chaplaincy-innovation-lab-lessons.s3.us-east-1.amazonaws.com/2025-01/sad-emotional-and-dramatic-piano-237661.mp3">
-      </audio> 
+     {/* <audio controls autoPlay src="https://chaplaincy-innovation-lab-lessons.s3.us-east-1.amazonaws.com/2025-01/sad-emotional-and-dramatic-piano-237661.mp3">
+      </audio>  */}
       </div>
      
       <div className="flex-box flex-center">
@@ -135,7 +135,7 @@ const DecisionLayout = (props) => {
               {props.activeScene.images && (
                 <div className="flex-box flex-center image-div">
                   {props.activeScene.images.map((image, j) => {
-                    <img src={image.image} key={j} alt={image.alt}/>;
+                   return <img src={image.image} key={j} alt={image.alt}/>;
                   })}
                 </div>
               )}
@@ -241,7 +241,7 @@ const DecisionLayout = (props) => {
                   key={i}
                   className="flex-column flex-end input-area"
                 >
-                  <p className="answer-select">{option.text}</p>
+                     <Body text={option.text} />
                   <input type="text" onChange={e => setInput(e.target.value)}/>
                   <div className="flex-box flex-end">
             <button className="button button-small"  onClick={e => handleInput(option.text)}>submit</button>
@@ -290,12 +290,14 @@ const DecisionLayout = (props) => {
             <div className="col-sm-12 col-lg-10 col-md-10">
        
               <div className="decision-feedback">
-            <p> Consider the following questions as you reflect on this scenario.</p>
+            <p>Consider the following questions as you reflect on the choices you made.</p>
            
 <ul>
-  <li>How effectively did the chaplain support Camille and the family? </li>
-  <li>What did the chaplain do to minimize trauma as much as possible?</li>
-  <li>How did the chaplain manage caring for themselves in this challenging time?</li>
+  <li>What went well in this situation? What cultural resources did the Native students have that allowed them to be the ones to be the voice of the unmet need in the entire student body?</li>
+  <li>How would you feel to be invited to participate in this ceremony? How would that feeling change if you were Native, or if you were not? </li>
+  <li>How would you accommodate students who were uncomfortable with the ceremony?</li>
+  <li>What role did the specific location of the University of Arizona play as the 17th most diverse
+medical school in 2023?</li>
         </ul>
             
               </div>

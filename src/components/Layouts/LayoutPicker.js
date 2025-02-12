@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import lessonData from "../ChooseLesson/lessonData";
-import ProgressBar from "../Header/ProgressBar";
 import DecisionLayout from "./DecisionLayout";
 import Title from "./Title";
 import TextOnlyLayout from "./TextOnlyLayout";
@@ -20,13 +19,11 @@ const LayoutPicker = () => {
       100
     ).toFixed(2);
     updateCompletedPercent(completedPercent);
-  }, []);
+  }, [lesson, scene.layoutNumber, scene.scene_number]);
   return (
     <div>
       <div className="flex-box flex-end">
-        {/* <div className="column-lg-3 column-md-3 column-sm-3">
-          <ProgressBar completed={completedPercent} />
-        </div> */}
+       
       </div>
       {layoutNumber === 1 && (
         <ImageLayout

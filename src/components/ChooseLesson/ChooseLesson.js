@@ -41,7 +41,9 @@ const ChooseLesson = () => {
                 </div>
                 <div className="info-div column-lg-5 column-sm-12 column-md-12">
                     <div className="info-box">
-                  <p>{lesson.metadata.description}</p>
+                 {lesson.metadata.description.map((description, i) =>{
+                  return <p key={i}>{description}</p>
+                  })}
                   </div>
                   <div className="info-box-trans">
                   <p>As a result of this lesson, you will be able to:</p>

@@ -3,70 +3,61 @@ const partA = (
  {
     "1": {
       question:
-        `<p>You are a Navajo medical student in the University of Arizona program. Navajos hold many strong beliefs about death, including a taboo against touching a dead body. </p><p>The term is about to begin, and you are concerned about the requirement to work in the Gross Anatomy Lab.</p><p>What do you do?</p>`,
+        `<p><b>The next day</b></p><p>The next morning at work, you get a text message from a coordinator at the relief organization, asking you to set up time to complete a volunteer pre-deployment mental health screening.</p><p>This confirms that the organization is involved with the shooting response; it also confirms that the event is sufficiently traumatic to warrant advance discussion with responding volunteers. You text back that you could complete the screening by phone as soon as possible.</p><p>Within hours, you receive the pre-screening phone call, which includes questions on whether you’ve experienced loss or other trauma and are prepared to handle on-the-ground conditions. </p><p>What is your reaction to those questions?</p>`,
       options: [
-        { text: `Push aside your concerns. You know that you need to complete this lab as part of your program.`, conditions: {type: null, command: "NEXT", index: null}, feedback: `This isn’t the best choice. Touching a dead body goes against strong beliefs you hold. What else can you do to explore your concerns?` },
-        { text: `Talk your classmate Amanda, another Native student, about what she thinks about the requirement.`, conditions: {type: null, command: "NEXT", index: null}, feedback: `This is the best choice in this situation. Talking to your classmate can help you figure out what to do to explore your concerns.` },
-        {text: `Plan a demonstration to protest the requirement.`, conditions: {type: null, command: "NEXT", index: null}, feedback: `This isn’t the best choice at the moment. Try talking to your classmate first to see if you can develop a plan for exploring your concerns. You may find common ground before escalating the situation on your own.`}
+        { text: `You think: these questions are intense and invasive. Why do they need to know about my experiences with loss and trauma for me to be able to do my job?`, conditions: {type: null, command: "NEXT", index: null}, feedback: `This isn’t the best choice. While it’s not wrong to question the purpose of the questions, as a spiritual care provider, you should be aware of how past experiences of loss and trauma may impact your ability to help others. These are valid questions in this context.` },
+        { text: `You answer the questions as asked.`, conditions: {type: null, command: "NEXT", index: null}, feedback: `This is the best choice. As a spiritual care provider, you should be aware of how past experiences of loss and trauma may impact your ability to help others. These are valid questions in this context.` },
+        {text: `You answer the questions, but downplay some of your experiences, as you don’t want to be disqualified from participating.`, conditions: {type: null, command: "NEXT", index: null}, feedback: `This is a bad choice. You should be honest about your experiences of loss and trauma as they may impact your ability to help those who are currently experiencing tremendous grief. Your experiences may aid your ability to serve others, too - but the organization wants to be able to accurately screen you.`}
         
       ],
       multipleSelect: false,
       type: "choice"
     }, 
     "2": {
-      question: `<p><strong>You decide to talk to your Yaqui classmate, Amanda, about your concerns. Yaquis don’t have specific taboos about touching dead bodies, but Amanda shares that she feels uneasy about working with a dead body.</strong></p>
-<aside>
-      <p><b>Amanda:</b> “You shouldn’t have to touch the body at all.”</p>
-     <p><b>You:</b> “But if I don’t touch the body, how can I pass the lab?” </p>
-     <p><b>Amanda:</b> “I don’t know. Maybe there is another way.”</p>
-     <p><b>You:</b> “I was talking with my mom about this the other night and she said that if the body was blessed first, it would be more acceptable to work with the body.”</p>
-     <p><b>Amanda:</b> “Oh we should ask Prof. Gonzales if he’d be willing to do that. I bet he would.”</p>
-     <p><b>You:</b> “You think he would?”</p>
-     <p><b>Amanda:</b> "It's worth asking. He’s Yaqui and he’s an apprentice of a traditional medicine person. He’s performed ceremonies like this in the past. He’s the right person to ask.”</p>
-     </aside>
-     <p>What should you do next?</p>
+      question: `<p><strong>The pre-screening determines that you are within acceptable parameters for recent trauma, grief and loss set by this disaster relief operation. </strong></p><p>You are cleared to deploy.</p><p>Another text message soon arrives, asking you to confirm your availability. This comes as little surprise, as the morning’s news had reported multiple fatalities from the shooting, although neither the attacker nor the victims had yet been identified. You reply that you’re still available and are told to keep an eye out for an email with further instructions.</p><p>When you break for lunch, you find the email waiting for you and take the first step
+prescribed by calling the organization’s travel agency to book a hotel near the site of the shooting. The agent lets you know that a response center has been set up in a convention hall about a mile from the site of the shooting. 
+</p><p>You tell the agent that you’ll arrive the next morning. You also let your work supervisor know that you’ve been activated to respond, an arrangement that has worked well since you began volunteering to provide spiritual care in disasters. You’ll be gone the following Monday to Friday.</p>
       `, 
       options: [
-        { text: `Email Dr. Gonzales to ask if he will perform a blessing ceremony.`, conditions: {type: null, command: "NEXT", index: null}, feedback: `This is the best choice. Dr. Gonzales has experience performing this type of ceremony and can be an advocate and ally for your concerns.` },
-        { text: `Wait it out and see what the lab instructor does.`, conditions: {type: null, command: "NEXT", index: null}, feedback: `This isn’t the best choice. The lab instructor has not indicated that he is planning to address your concerns, because he may not be aware of them yet. Seek guidance from Dr. Gonzales to help advocate for your needs.` },
-        
+        { text: `<p><b>Reflect</b></p><p>What experiences in a chaplain's own life and career might come up in the pre-screening questions? What might make a chaplain hesistant to respond to a violent, traumatic disaster?</p>`, conditions: {type: null, command: "NEXT", index: null}, feedback: `` },
       ],
       multipleSelect: false,
-      type: "choice", 
+      type: "open", 
+      end: true
   }, 
   "3": {
-      question: `<p><strong>You and Amanda contact Dr. Gonzales, asking him to perform a blessing before the lab starts, to help you feel more comfortable. </strong></p><p>In your email, you asked Dr. Gonzales if his blessings could explore a physical memorial for the deceased, prayer, honoring of the native belief system regarding the Seven Sacred Directions, emotional guidance in preparation for undergoing encounters with death, and/or granting permission for interacting with the dead body.</p><p>He wrote back that he’d be happy to perform a blessing and it could include all of those elements, but he was concerned about causing concerns with others in the medical school, and the lab instructor. </p><p>He wrote, “Would it be okay if I perform a private blessing for just you and Amanda? I’m not sure how the medical school would respond if we made this event public.”</p>`,
-      options: [
-        {text: `<p><b>What do you think about his response?</b></p><ul><li>Should Dr. Gonzales consider opening this blessing up to the public, or at least the rest of the lab students? Why or why not?</li><li>Who might Dr. Gonzales have to consult before performing the blessing? </li><li>What are the risks of offering the blessing, or the risks of not offering it?</li></ul><br/> `, conditions: {type: null, command: '', index: null}, feedback: ``},
-
-      ],
-      multipleSelect: false, 
-      type: "open", 
-     
-  },
-  "4": {
-    question: `<p><strong>While there are good reasons for making the blessing offering public, you decided that having a private blessing would be acceptable, and would help you feel more comfortable participating in the Gross Anatomy Lab.</strong></p>
-    <p>The blessing was focused on you and Amanda, and the donor body. The three foci were each blessed individually, centered around inviting positive energy into the experience and cleansing negative energy. But word got out and other students also wanted to attend a similar ceremony.</p><p>As Dr. Gonzales put it, “Other students heard about this blessing and asked for similar blessings. Through the ceremony, students learn to respect and thank the willed body donors. It is also a way to clear the students of negative energy and replace it with positive energy as they start their second year of medical school.”</p>`,
-    options: [],
+    question: `<p>The next morning, you drive to the convention hall and find the response center, where your temporary supervisor is located. You notice that multiple large rooms have been commandeered to support victims and families. You assume this means the shooting was on a larger scale than you initially thought.</p><p>Your supervisor completes a brief intake process by checking your badge and handing you a packet of logistical information: the details of your hotel, other organizations responding to the site, and contact information for various entities involved in the process. The supervisor lets you know that a meeting of the spiritual care response team will happen in about an hour.<p><p>As you wait, how do you prepare yourself?`,
+    options: [{ text: `You find a newspaper or website to see what information is publicly available.`, conditions: {type: null, command: "NEXT", index: null}, feedback: `This is the best choice. Spiritual care volunteers support victims and families in whatever way they need. You have an opportunity to indicate where you think you can provide the best support, so it can be helpful to try to find out more information about what happened. ` },{ text: `You start asking other volunteers for more information.`, conditions: {type: null, command: "NEXT", index: null}, feedback: `This isn’t a bad choice, but the other volunteers may not have accurate information about the situation.` },{ text: `You sit patiently and wait for your supervisor to share more information.`, conditions: {type: null, command: "NEXT", index: null}, feedback: `This isn’t a good choice. You should start to prepare yourself for the range of situations people might be in - people who have family members who were killed, or people who were shot and injured, for instance. Use this time to start to mentally prepare for what you might expect.` },
+    ],
     multipleSelect: false, 
-    type: "none", 
-    end: true,
+    type: "choice", 
+  
    },
-"5": {
-  question: `<p>Earlier that year, the Medical Humanities Program, which seeks to instill humanitarian
-beliefs into the curriculum of upcoming physicians, had just started a tree planting ceremony to honor people who died and donated their bodies to science. Each year medical students – all of whom take anatomy classes – would plant a tree in a memorial garden.</p><p>Dr. Gonzales joined forces with the Medical Humanities Program and together they created the Tree Blessing Ceremony, which combines a traditional Native American blessing ceremony and a tree planting to honor those who have passed away and donated their bodies to science. He was given permission by his Yaqui elders to perform blessings for medical students – something he tells the participants, because it is important for the audience to know.</p>
+"4": {
+  question: `
 
 `,
-options: [
-  {text: `What are you feeling right now? How are your feelings impacting your work?`, conditions: {type: null, command: '', index: null}, feedback: ``}
-],
+options: [],
   multipleSelect: false, 
   type: "none",
-  end: true
-
   },
- 
-  
+ "5": {
+  question: `<p>Relief personnel are helping families find local lodging and arrange meals and other necessities, including transportation of victims’ remains. The spiritual care volunteers have been divided into two groups: one group will be available to families with a confirmed loss, and the other will assist families with victims in local hospitals. While the on-site supervisor will ultimately decide where volunteers are assigned, she does ask if there are any preferences.</p>
+  <p>The report the supervisor distributed includes a list of organizations known to be responding. It includes several local churches that have brought supplies like toiletries and clothing for traveling families. You make note of this information and then turn to the on-site supervisor to mention your preference for assignment. Because of your regular job in a county hospital, you feel better suited to help families with injured loved ones in local hospitals. The supervisor affirms your preference and assigns you to a multidisciplinary team to meet with a specific family. The team includes a mental health expert and a nurse.</p>
+  <p>Together the team will be driven to a local hospital the next morning, which has not been announced as a site for caring for victims.</p>
+
+`,
+options: [],
+  multipleSelect: false, 
+  type: "none",
+  },
+  "6": {
+    question: `<p>The next morning, on the way to the hospital, the route takes the team within a block of the scene of the shooting. It has been taped off by law enforcement, with FBI, state, and local police vehicles still blocking traffic past the club. On a street light post near the barricades, people have already begun leaving flowers, candles with religious imagery, and handmade memorial posters.</p><p>the route takes the team within a block of the scene of the shooting. It has been taped off by law enforcement, with FBI, state, and local police vehicles still blocking traffic past the club. On a street light post near the barricades, people have already begun leaving flowers, candles with religious imagery, and handmade memorial posters.</p>
+  `,
+  options: [],
+    multipleSelect: false, 
+    type: "none",
+    },
 }
 )
 export default partA;

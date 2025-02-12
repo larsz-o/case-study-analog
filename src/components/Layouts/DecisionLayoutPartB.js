@@ -7,7 +7,7 @@ import Body from './HTMLRender';
 import ImageLayout from './ImageLayout'
 import lessonData from "../ChooseLesson/lessonData";
 
-const DecisionLayout = (props) => {
+const DecisionLayoutPartB = (props) => {
 
   const [decisionStarted, startDecision] = useState(true);
   const [selected, updateSelected] = useState([]);
@@ -293,7 +293,7 @@ const DecisionLayout = (props) => {
     </div>
   );
 };
-export default DecisionLayout;
+export default DecisionLayoutPartB;
 
 
 

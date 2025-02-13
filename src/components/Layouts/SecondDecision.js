@@ -1,28 +1,26 @@
 import { useState} from "react";
 import MainText from "./MainText";
-import partA from "../Data/partA";
+import partB from "../Data/partB";
 import swal from 'sweetalert'
 import { Dialog, DialogContent } from '@mui/material';
 import Body from './HTMLRender';
-import ImageLayout from './ImageLayout'
-import lessonData from "../ChooseLesson/lessonData";
+import Toolbar from "../Layouts/Toolbar";
 
-const DecisionLayoutPartB = (props) => {
+
+const DecisionLayout = (props) => {
 
   const [decisionStarted, startDecision] = useState(true);
   const [selected, updateSelected] = useState([]);
   const [feedback, updateFeedback] = useState([]);
-  const [decisionData] = useState(partA)
+  const [decisionData] = useState(partB)
   const [index, updateIndex] = useState(1);
   const [decisionEnded, endDecision] = useState(false)
   const [showAdvance, setAdvance] = useState(false)
   const [input, setInput] = useState([])
   const [open, setOpen] = useState(false)
-  const [multipleFeedback, setMultipleFeedback] = useState(``)
+  const [multipleFeedback, setMultipleFeedback] = useState(` `)
   const [showMultipleFeedback, updateShowMultipleFeedback] = useState(false)
-  const [lesson] = useState(lessonData);
-  const [scene, updateScene] = useState(lesson[9]);
-  const [layoutNumber, updateLayoutNumber] = useState();
+ 
 
   // when hitting submit, add open text entry to local storage to save for later
   function handleInput(text) {
@@ -41,7 +39,6 @@ const DecisionLayoutPartB = (props) => {
     // if we have data, add it here.
     // we need to get the object back, so search for it here.
     if (decisionData[index].end) {
-      console.log("end")
       updateFeedback([])
       startDecision(false)
       endDecision(true)
@@ -67,7 +64,6 @@ const DecisionLayoutPartB = (props) => {
     }
 
   }
-
 
   function handleChange(event, option) {
     let feedbackDisplay = [];
@@ -109,8 +105,8 @@ const DecisionLayoutPartB = (props) => {
   return (
     <div className="layout-page">
       <div className="flex-box flex-end">
-        {/* <audio controls autoPlay src="https://chaplaincy-innovation-lab-lessons.s3.us-east-1.amazonaws.com/2025-01/sad-emotional-and-dramatic-piano-237661.mp3">
-      </audio>  */}
+        <audio controls autoPlay src="https://chaplaincy-innovation-lab-lessons.s3.us-east-1.amazonaws.com/2025-01/sad-emotional-and-dramatic-piano-237661.mp3">
+      </audio> 
       </div>
 
       <div className="flex-box flex-center">
@@ -122,34 +118,7 @@ const DecisionLayoutPartB = (props) => {
           )}
         </div>
       </div>
-      {!decisionStarted && !decisionEnded && (
-        <div>
-
-          <div className="flex-box flex-center">
-            <div className="column-lg-10 column-md-12 column-sm-12 text-spotlight text-blue">
-              {props.activeScene.text.map((text, i) => {
-                return <MainText className={`none`} text={text} key={i} />;
-              })}
-            </div>
-
-            <div className="column-lg-10 column-md-12 column-sm-12">
-              {props.activeScene.images && (
-                <div className="flex-box flex-center image-div">
-                  {props.activeScene.images.map((image, j) => {
-                    return <img src={image.image} key={j} alt={image.alt} />;
-                  })}
-                </div>
-              )}
-            </div>
-          </div>
-          <div className="flex-box flex-center nav-buttons">
-
-            <button className="button" onClick={() => startDecision(true)}>
-              Start
-            </button>
-          </div>
-        </div>
-      )}
+   
       <div className="flex-box flex-center">
         {decisionStarted && (
           <div className="column-lg-10 column-md-12 column-sm-12 text-spotlight text-blue">
@@ -285,15 +254,26 @@ const DecisionLayoutPartB = (props) => {
       </div>}
 
       {!decisionStarted && decisionEnded && (
-       <ImageLayout  activeScene={scene}
-       updateScene={updateScene}
-       updateLayoutNumber={updateLayoutNumber}
-       lesson={lesson}/>
+       <div>
+        <div className="flex-box flex-center">
+          <div className="decision-feedback">
+          <p>Consider the following questions as you reflect on the choices you made:</p>
+           
+           <ul>
+             <li>Some religious organizations respond to disaster sites with general humanitarian aid, like food and clothing, while also bringing religious literature or offering religious services. Is this ever appropriate? Is there an appropriate way to overtly integrate religious belief with disaster assistance? How should volunteers like the chaplain navigate the presence of such organizations?</li>
+             <li>Many people have suffered religious trauma or other harm committed by individuals or communities in the name of ideology or religious belief. How can chaplains – who are often perceived to be religious leaders – be mindful of this and “get ahead” of objections to spiritual care because of this past trauma? </li>
+             <li>How can chaplains remain as a calm, non-anxious presence when a situation is volatile due to intragroup dynamics?</li>
+   
+                   </ul>
+          </div>
+        </div>
+        <Toolbar activeScene={props.activeScene} updateLayoutNumber={props.updateLayoutNumber} lesson={props.lesson} updateScene={props.updateScene}/>
+       </div>
       )}
     </div>
   );
 };
-export default DecisionLayoutPartB;
+export default DecisionLayout;
 
 
 

@@ -37,7 +37,7 @@ const Navigation = (props) => {
   function confirmEnd() {
     swal({
       title: "Are you sure?",
-      text: "Are you sure you want to end this lesson? All of your data will be erased.",
+      text: "Are you sure you want to end this lesson?",
       icon: "warning",
       buttons: true,
       dangerMode: true,
@@ -87,11 +87,11 @@ const Navigation = (props) => {
             Next &rarr;
           </button>
         )}
-      {props.activeScene.last && (
+      {/* {props.activeScene.last && (
         <button className="button" onClick={() => confirmEnd()}>
           End lesson
         </button>
-      )}
+      )} */}
       {props.activeScene.checkpoint && checkpointToDo && (
         <button className="button" onClick={() => changeOpen(true)}>
           Reflect and Assess

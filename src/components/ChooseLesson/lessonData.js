@@ -85,7 +85,7 @@ const lessonData = {
     images: [
       {image: 'https://chaplaincy-innovation-lab-lessons.s3.us-east-1.amazonaws.com/2025-01/fema-center-1-p.avif', alt: 'Disaster relief center', order: 0}
     ],
-    layoutNumber: 4,
+    layoutNumber: 1,
     navigation: [
       { available_scene: "9.1", current_scene: "9", previous_scene: "8",text: "Continue" },
     ],
@@ -95,7 +95,7 @@ const lessonData = {
     sidebarVideos: [],
     sidebarText: [],
     text: [
-      `<p><p>Until you have more information, you decide to stay out of the way and find a newspaper or website to see what information is publicly available.</p><p>The supervisor convenes the first of two daily meetings an hour later, gathering half a dozen volunteers. The supervisor distributes a report detailing everything known about the shooting up to that point and gives the volunteers a few moments to read through the information. </p><p>Police have shared with the relief organization that 30 were killed in the shooting, with at least a dozen more injured and now in area hospitals. One responding police officer was killed and three more were injured. The assailant is also dead, although it is unclear whether by suicide or officer shooting.</p><p>A temporary mortuary facility has been established elsewhere and its location kept confidential. Families are being notified and have begun arriving at this center, with the relief organization coordinating assistance in several rooms throughout the center.</p><p>Personnel are staffing those rooms under the supervision of the FBI, which has secured the entire convention center. No one except law enforcement and approved organizations are allowed in. There is no press or other access.</p>`,
+      `<p>The supervisor convenes the first of two daily meetings an hour later, gathering half a dozen volunteers. The supervisor distributes a report detailing everything known about the shooting up to that point and gives the volunteers a few moments to read through the information. </p><p>Police have shared with the relief organization that 30 were killed in the shooting, with at least a dozen more injured and now in area hospitals. One responding police officer was killed and three more were injured. The assailant is also dead, although it is unclear whether by suicide or officer shooting.</p><p>A temporary mortuary facility has been established elsewhere and its location kept confidential. Families are being notified and have begun arriving at this center, with the relief organization coordinating assistance in several rooms throughout the center.</p><p>Personnel are staffing those rooms under the supervision of the FBI, which has secured the entire convention center. No one except law enforcement and approved organizations are allowed in. There is no press or other access.</p>`,
     ],
     title: null,
     videos: [],
@@ -157,7 +157,7 @@ you know from previous deployments have things like underwear and socks for thos
     ],
     layoutNumber: 1,
     navigation: [
-      { available_scene: "9.4", current_scene: "9.3", previous_scene: "9.2",text: "Continue" },
+      { available_scene: "11", current_scene: "9.3", previous_scene: "9.2",text: "Continue" },
     ],
     scene_number: "9.3",
     sidebar: false,
@@ -171,26 +171,16 @@ you know from previous deployments have things like underwear and socks for thos
     videos: [],
     audio: [],
   },
-  9.4: {
+  11: {
     checkpoint: false,
     last: false,
-    checkpoints: [{
-      alt: null,
-      answer: false,
-      content_type: 5,
-      data:
-        ``,
-      order: 0,
-      question_type: 2,
-      scene_number: "8",
-      sidebar: false,
-    }],
+    checkpoints: [],
     images: [],
-    layoutNumber: 7,
+    layoutNumber: 8,
     navigation: [
-      { available_scene: "10", current_scene: "9.4", previous_scene: "9.3",text: "Continue" },
+      { available_scene: "10", current_scene: "11", previous_scene: "9.3",text: "Continue" },
     ],
-    scene_number: "9.4",
+    scene_number: "11",
     sidebar: false,
     sidebarImages: [],
     sidebarVideos: [],
@@ -206,14 +196,14 @@ you know from previous deployments have things like underwear and socks for thos
     checkpoints: [],
     images: [],
     layoutNumber: 6,
-    navigation: [{available_scene: "10", current_scene: "10", previous_scene: "7",text: "End Lesson" }],
+    navigation: [{available_scene: "10", current_scene: "10", previous_scene: "11",text: "End Lesson" }],
     scene_number: "10",
     sidebar: false,
     sidebarImages: [],
     sidebarVideos: [],
     sidebarText: [],
     text: [
-      `<p>You’ve completed this case study lesson. You made important decisions about how to advocate for spiritual and religious needs.</p><p>You learned how students may be impacted by demands of medical education and how to think broadly about spiritual and cultural backgrounds when working with all sorts of people.</p>`
+      `<p>You’ve completed this case study lesson. You made important decisions about how to manage, affirm, and provide comfort to complicated human emotions during violent disasters. You learned about the complex systems in place to support people during disasters and the role of the chaplain in these systems. </p>`
     ],
     title: "Lesson complete",
     videos: [],

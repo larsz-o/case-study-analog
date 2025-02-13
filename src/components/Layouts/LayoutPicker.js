@@ -5,7 +5,8 @@ import Title from "./Title";
 import TextOnlyLayout from "./TextOnlyLayout";
 import ImageLayout from "./ImageLayout";
 import LessonComplete from "./LessonComplete";
-import DecisionLayoutPartB from "./DecisionLayoutPartB";
+import SecondDecision from "./SecondDecision";
+
 
 const LayoutPicker = () => {
   const [lesson] = useState(lessonData);
@@ -15,21 +16,13 @@ const LayoutPicker = () => {
 
   useEffect(() => {
     updateLayoutNumber(scene.layoutNumber);
-
+    console.log(scene.scene_number)
   }, [lesson, scene.layoutNumber, scene.scene_number]);
   return (
     <div>
       <div className="flex-box flex-end">
 
       </div>
-      {layoutNumber === 7 && (
-        <DecisionLayoutPartB
-          activeScene={scene}
-          updateScene={updateScene}
-          updateLayoutNumber={updateLayoutNumber}
-          lesson={lesson}
-        />
-      )}
       {layoutNumber === 1 && (
         <ImageLayout
           activeScene={scene}
@@ -53,6 +46,13 @@ const LayoutPicker = () => {
           updateLayoutNumber={updateLayoutNumber}
           lesson={lesson}
         />
+      )}
+      {layoutNumber === 8 && (
+        <SecondDecision 
+        activeScene={scene}
+        updateScene={updateScene}
+        updateLayoutNumber={updateLayoutNumber}
+        lesson={lesson}/>
       )}
       {layoutNumber === 9 && (
         <DecisionLayout

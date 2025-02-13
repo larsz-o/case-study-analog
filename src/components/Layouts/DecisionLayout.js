@@ -4,8 +4,8 @@ import partA from "../Data/partA";
 import swal from 'sweetalert'
 import { Dialog, DialogContent } from '@mui/material';
 import Body from './HTMLRender';
-import ImageLayout from './ImageLayout'
-import lessonData from "../ChooseLesson/lessonData";
+import Toolbar from "../Layouts/Toolbar";
+
 
 const DecisionLayout = (props) => {
 
@@ -18,11 +18,9 @@ const DecisionLayout = (props) => {
   const [showAdvance, setAdvance] = useState(false)
   const [input, setInput] = useState([])
   const [open, setOpen] = useState(false)
-  const [multipleFeedback, setMultipleFeedback] = useState(``)
+  const [multipleFeedback, setMultipleFeedback] = useState(` `)
   const [showMultipleFeedback, updateShowMultipleFeedback] = useState(false)
-  const [lesson] = useState(lessonData);
-  const [scene, updateScene] = useState(lesson[9]);
-  const [layoutNumber, updateLayoutNumber] = useState();
+ 
 
   // when hitting submit, add open text entry to local storage to save for later
   function handleInput(text) {
@@ -41,7 +39,6 @@ const DecisionLayout = (props) => {
     // if we have data, add it here.
     // we need to get the object back, so search for it here.
     if (decisionData[index].end) {
-      console.log("end")
       updateFeedback([])
       startDecision(false)
       endDecision(true)
@@ -67,7 +64,6 @@ const DecisionLayout = (props) => {
     }
 
   }
-
 
   function handleChange(event, option) {
     let feedbackDisplay = [];
@@ -122,34 +118,7 @@ const DecisionLayout = (props) => {
           )}
         </div>
       </div>
-      {!decisionStarted && !decisionEnded && (
-        <div>
-
-          <div className="flex-box flex-center">
-            <div className="column-lg-10 column-md-12 column-sm-12 text-spotlight text-blue">
-              {props.activeScene.text.map((text, i) => {
-                return <MainText className={`none`} text={text} key={i} />;
-              })}
-            </div>
-
-            <div className="column-lg-10 column-md-12 column-sm-12">
-              {props.activeScene.images && (
-                <div className="flex-box flex-center image-div">
-                  {props.activeScene.images.map((image, j) => {
-                    return <img src={image.image} key={j} alt={image.alt} />;
-                  })}
-                </div>
-              )}
-            </div>
-          </div>
-          <div className="flex-box flex-center nav-buttons">
-
-            <button className="button" onClick={() => startDecision(true)}>
-              Start
-            </button>
-          </div>
-        </div>
-      )}
+   
       <div className="flex-box flex-center">
         {decisionStarted && (
           <div className="column-lg-10 column-md-12 column-sm-12 text-spotlight text-blue">
@@ -285,10 +254,14 @@ const DecisionLayout = (props) => {
       </div>}
 
       {!decisionStarted && decisionEnded && (
-       <ImageLayout  activeScene={scene}
-       updateScene={updateScene}
-       updateLayoutNumber={updateLayoutNumber}
-       lesson={lesson}/>
+       <div>
+        <div className="flex-box flex-center">
+          <div className="decision-feedback">
+          <p>Until you have more information, you decide to stay out of the way and find a newspaper or website to see what information is publicly available.</p>
+          </div>
+        </div>
+        <Toolbar activeScene={props.activeScene} updateLayoutNumber={props.updateLayoutNumber} lesson={props.lesson} updateScene={props.updateScene}/>
+       </div>
       )}
     </div>
   );

@@ -46,11 +46,7 @@ const LessonComplete = (props) => {
       description: `<p><a href="https://chaplaincyinnovation.org/lab-in-the-news-2" target="_blank">Our blog</a> is rich with voices of experts in spiritual care. Check out the diverse perspectives and lively discussion.</p>`,
       icon: "discussion.svg",
     },
-    {
-      name: "Our Website",
-      description: `<p><a href="https://chaplaincyinnovation.org/" target="_blank">Visit our website</a> to learn more about the Chaplaincy Innovation Lab!</p>`,
-      icon: "article.svg",
-    },
+ 
   ]);
 
   return (
@@ -88,21 +84,7 @@ const LessonComplete = (props) => {
           </div>
           <div className="flex-box flex-center cil-header">
             <div className="flex-box flex-column column-lg-12 column-sm-12 column-md-12">
-              <div className="flex-box flex-center">
-                <img
-                  src="https://chaplaincy-innovation-lab-lessons.s3.amazonaws.com/typing.png"
-                  alt="lesson complete"
-                  className="resources-gif"
-                />
-                <div className="flex-box flex-column column-lg-5 column-sm-12 text-spotlight">
-                  <h4>Stay engaged!</h4>
-                  <p>
-                    Now that you’ve completed this case study, here are a few
-                    ways to learn more about the Chaplaincy Innovation Lab! Stay
-                    engaged! Stay informed!
-                  </p>
-                </div>
-              </div>
+            
 
               <div className="flex-box flex-center more-info ">
                 {cilResources.map((resource, i) => {

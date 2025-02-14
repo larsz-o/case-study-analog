@@ -141,6 +141,11 @@ button {
 }
 .lesson-image-picker{
   position: relative;
+  margin-bottom: 3vh;
+  margin-top:0;
+  border: 5px solid #282c34;
+  box-shadow: 5px 10px #282c34;
+  border-radius: 5px;
 }
 
 .button {
@@ -423,9 +428,7 @@ input[type="text"]{
   width: 100%;
   min-height: 250px;
 }
-.lesson-image-container {
-  margin: 5vh 0 5vh 0;
-}
+
 .lesson-subtitle {
   color: black;
   text-align: center;
@@ -435,8 +438,6 @@ color: black;
 text-align: center;
 font-size: 2em;
 font-weight: 400;
-
-
 }
 .lesson-video {
   margin: 2vh;

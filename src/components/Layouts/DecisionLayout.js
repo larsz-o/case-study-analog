@@ -34,7 +34,7 @@ const DecisionLayout = (props) => {
     });
   }
   function advance() {
-
+    window.scrollTo(0,0);
     setAdvance(false)
     // if we have data, add it here.
     // we need to get the object back, so search for it here.
@@ -211,7 +211,7 @@ const DecisionLayout = (props) => {
                       key={i}
                       className="flex-column flex-end input-area"
                     >
-                      <Body text={option.text} />
+                    <p className="answer-select">{option.text}</p>
                       <input type="text" onChange={e => setInput(e.target.value)} />
                       <div className="flex-box flex-end">
                         <button className="button button-small" onClick={e => handleInput(option.text)}>submit</button>
@@ -257,7 +257,16 @@ const DecisionLayout = (props) => {
        <div>
         <div className="flex-box flex-center">
           <div className="decision-feedback">
-          <p>Until you have more information, you decide to stay out of the way and find a newspaper or website to see what information is publicly available.</p>
+          <p>Consider the following questions as you reflect on the choices you made:</p>
+           
+           <ul>
+             <li>How might a chaplain help you integrate the difficulty brought about by the car accident into an overall pattern of healing after the earlier trauma?</li>
+             <li> Some organizational cultures still promote an approach to dealing with struggles that might be described as “tough guy,” even as a point of pride. This is common in highly confrontational professions, like law enforcement or the military. <ul><li>What purpose do you think this “tough guy” culture is intended to serve?</li> <li>Are there other, perhaps healthier, approaches that could achieve the same goal? </li><li>What are some other professions / settings which commonly put pressure on individuals to not discuss negative feelings or outcomes from on-the-job situations?</li></ul>
+</li>
+             <li>At the post-critical incident seminar, experts from a variety of fields presented their own subject matter – psychology, counseling, addiction, relationships, and so on. Yet when you found yourself in need again, it was Chaplain Rogers you called, not a therapist or counselor.<ul><li>What can or should chaplains offer to those in need that those in other professions cannot?</li>
+              </ul> </li>
+   
+                   </ul>
           </div>
         </div>
         <Toolbar activeScene={props.activeScene} updateLayoutNumber={props.updateLayoutNumber} lesson={props.lesson} updateScene={props.updateScene}/>
